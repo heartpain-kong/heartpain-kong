@@ -90,6 +90,24 @@
   <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=heartpain-kong&layout=compact&hide_border=true&bg_color=150B18&title_color=F9A8D4&text_color=E8D5E2&langs_count=6&card_width=400&exclude_repo=LocoWiki,HIMLoco,damiao_mc02_bsp,the_past_of_curc-robocon,LeggedWiki.github.io" alt="主要语言">
 </p>
 
+## 📈 Metrics
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/heartpain-kong/heartpain-kong/output/github-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/heartpain-kong/heartpain-kong/output/github-snake.svg">
+    <img alt="contribution snake" src="https://raw.githubusercontent.com/heartpain-kong/heartpain-kong/output/github-snake.svg" width="100%">
+  </picture>
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-night-view.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-season-animate.svg">
+    <img alt="3D contribution graph" src="./profile-3d-contrib/profile-season-animate.svg" width="100%">
+  </picture>
+</p>
+
 ## 📚 学习与分享
 
 - **[LocoWiki](https://locowiki.github.io/)** — 四足运控入门路线：从基础理论到论文复现的索引
