@@ -38,62 +38,29 @@
     </pattern>
   </defs>
 
-  <style>
-    .sheen   { animation: sheen 18s linear infinite; }
-    .spine   { animation: spine 9s linear infinite; }
-    .traj    { animation: traj 7s linear infinite; }
-    .halo    { animation: halo 4.5s ease-in-out infinite alternate; }
-    .halo2   { animation: halo 5.6s ease-in-out infinite alternate; animation-delay: -1.8s; }
-    .p       { animation: drift 8s ease-in-out infinite alternate; }
-    .p2      { animation-delay: -2s; }
-    .p3      { animation-delay: -3.6s; }
-    .p4      { animation-delay: -5.2s; }
-    .p5      { animation-delay: -6.4s; }
-    .glowC   { animation: breathe 7s ease-in-out infinite alternate; }
-    .glowV   { animation: breathe 9s ease-in-out infinite alternate-reverse; }
-
-    @keyframes sheen {
-      0%   { transform: translateX(-700px); }
-      100% { transform: translateX(1250px); }
-    }
-    @keyframes spine {
-      0%   { transform: translateY(-90px); opacity: 0; }
-      12%  { opacity: 1; }
-      88%  { opacity: 1; }
-      100% { transform: translateY(300px); opacity: 0; }
-    }
-    @keyframes traj {
-      0%   { stroke-dashoffset: 0; }
-      100% { stroke-dashoffset: -360; }
-    }
-    @keyframes halo {
-      0%   { opacity: 0.12; }
-      100% { opacity: 0.5; }
-    }
-    @keyframes drift {
-      0%   { transform: translate(0, 0); opacity: 0.15; }
-      100% { transform: translate(6px, -10px); opacity: 0.7; }
-    }
-    @keyframes breathe {
-      0%   { opacity: 0.65; }
-      100% { opacity: 1; }
-    }
-  </style>
-
   <rect width="1200" height="300" fill="url(#bg)"/>
   <rect width="1200" height="300" fill="url(#grid)" opacity="0.55"/>
 
-  <g class="glowC"><ellipse cx="960" cy="40" rx="330" ry="240" fill="url(#glowCyan)"/></g>
-  <g class="glowV"><ellipse cx="1120" cy="280" rx="300" ry="200" fill="url(#glowViolet)"/></g>
+  <!-- 呼吸光晕 -->
+  <ellipse cx="960" cy="40" rx="330" ry="240" fill="url(#glowCyan)" opacity="0.8">
+    <animate attributeName="opacity" values="0.65;1;0.65" dur="7s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="1120" cy="280" rx="300" ry="200" fill="url(#glowViolet)" opacity="0.8">
+    <animate attributeName="opacity" values="1;0.6;1" dur="9s" repeatCount="indefinite"/>
+  </ellipse>
 
   <!-- 流动光带 -->
-  <g class="sheen">
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="-720 0;1260 0" dur="18s" repeatCount="indefinite"/>
     <rect x="-380" y="-60" width="300" height="420" fill="url(#sheenGrad)" transform="rotate(10 0 150)"/>
   </g>
 
-  <!-- 左侧渐变脊线 + 扫描高光 -->
+  <!-- 左侧渐变脊线 + 向下扫描的高光 -->
   <rect x="0" y="0" width="5" height="300" fill="url(#accent)"/>
-  <rect class="spine" x="0" y="0" width="5" height="90" fill="url(#spineGlow)"/>
+  <rect x="0" y="0" width="5" height="90" fill="url(#spineGlow)" opacity="0">
+    <animateTransform attributeName="transform" type="translate" values="0 -90;0 300" dur="9s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.12;0.88;1" dur="9s" repeatCount="indefinite"/>
+  </rect>
 
   <!-- 电路走线 -->
   <g fill="none" stroke="#1E4B6B" stroke-width="1.2" stroke-opacity="0.75">
@@ -107,26 +74,52 @@
 
   <!-- 漂浮粒子 -->
   <g fill="#7DD3FC">
-    <circle class="p"        cx="742" cy="196" r="2.2"/>
-    <circle class="p p2"     cx="812" cy="72"  r="1.7"/>
-    <circle class="p p3"     cx="878" cy="248" r="2.4"/>
-    <circle class="p p4"     cx="1084" cy="118" r="1.8"/>
-    <circle class="p p5"     cx="1142" cy="212" r="2.1"/>
-    <circle class="p p2"     cx="962" cy="288" r="1.6"/>
+    <circle cx="742" cy="196" r="2.2" opacity="0.3">
+      <animateTransform attributeName="transform" type="translate" values="0 0;6 -10;0 0" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.15;0.7;0.15" dur="8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="812" cy="72" r="1.7" opacity="0.3">
+      <animateTransform attributeName="transform" type="translate" values="0 0;5 -8;0 0" dur="9s" begin="-2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.15;0.75;0.15" dur="9s" begin="-2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="878" cy="248" r="2.4" opacity="0.3">
+      <animateTransform attributeName="transform" type="translate" values="0 0;-5 -11;0 0" dur="7s" begin="-3.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.2;0.8;0.2" dur="7s" begin="-3.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1084" cy="118" r="1.8" opacity="0.3">
+      <animateTransform attributeName="transform" type="translate" values="0 0;7 -9;0 0" dur="10s" begin="-5.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.12;0.65;0.12" dur="10s" begin="-5.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1142" cy="212" r="2.1" opacity="0.3">
+      <animateTransform attributeName="transform" type="translate" values="0 0;-6 -12;0 0" dur="8.5s" begin="-6.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.15;0.72;0.15" dur="8.5s" begin="-6.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="962" cy="288" r="1.6" opacity="0.3">
+      <animateTransform attributeName="transform" type="translate" values="0 0;4 -7;0 0" dur="6.5s" begin="-1.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.18;0.7;0.18" dur="6.5s" begin="-1.2s" repeatCount="indefinite"/>
+    </circle>
   </g>
 
   <!-- 四足机构示意 -->
   <g>
-    <path class="traj" d="M806 236 Q 890 128 1046 206" fill="none" stroke="#5B7091" stroke-width="1.2" stroke-dasharray="3 9" stroke-opacity="0.65"/>
+    <path d="M806 236 Q 890 128 1046 206" fill="none" stroke="#5B7091" stroke-width="1.2" stroke-dasharray="3 9" stroke-opacity="0.65">
+      <animate attributeName="stroke-dashoffset" from="0" to="-360" dur="7s" repeatCount="indefinite"/>
+    </path>
     <path d="M924 96 L 1016 162 L 946 250" fill="none" stroke="url(#accent)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
     <path d="M924 96 L 876 132" fill="none" stroke="#22D3EE" stroke-width="2.6" stroke-linecap="round" stroke-opacity="0.75"/>
     <circle cx="924" cy="96" r="7.5" fill="#0B1526" stroke="#22D3EE" stroke-width="2"/>
     <circle cx="1016" cy="162" r="6" fill="#0B1526" stroke="#8B5CF6" stroke-width="2"/>
     <circle cx="946" cy="250" r="6.5" fill="#0B1526" stroke="#A855F7" stroke-width="2"/>
     <circle cx="876" cy="132" r="4" fill="#0B1526" stroke="#22D3EE" stroke-width="1.6" stroke-opacity="0.8"/>
-    <circle class="halo"  cx="1016" cy="162" r="17" fill="none" stroke="#8B5CF6" stroke-width="1"/>
-    <circle class="halo2" cx="924" cy="96"  r="21" fill="none" stroke="#22D3EE" stroke-width="1"/>
-    <circle class="halo2" cx="946" cy="250" r="13" fill="none" stroke="#A855F7" stroke-width="1"/>
+    <circle cx="1016" cy="162" r="17" fill="none" stroke="#8B5CF6" stroke-width="1" opacity="0.12">
+      <animate attributeName="opacity" values="0.12;0.5;0.12" dur="9s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="924" cy="96" r="21" fill="none" stroke="#22D3EE" stroke-width="1" opacity="0.12">
+      <animate attributeName="opacity" values="0.12;0.45;0.12" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="946" cy="250" r="13" fill="none" stroke="#A855F7" stroke-width="1" opacity="0.12">
+      <animate attributeName="opacity" values="0.12;0.55;0.12" dur="8s" repeatCount="indefinite"/>
+    </circle>
   </g>
 
   <!-- 标签 -->
