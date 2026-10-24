@@ -15,6 +15,16 @@
       <stop offset="0.6" stop-color="#6366F1" stop-opacity="0.35"/>
       <stop offset="1" stop-color="#6366F1" stop-opacity="0"/>
     </linearGradient>
+    <linearGradient id="sheenGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7DD3FC" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#7DD3FC" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#A78BFA" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="spineGlow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#22D3EE" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#E0F7FF" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#A855F7" stop-opacity="0"/>
+    </linearGradient>
     <radialGradient id="glowCyan" cx="0.5" cy="0.5" r="0.5">
       <stop offset="0" stop-color="#22D3EE" stop-opacity="0.20"/>
       <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
@@ -28,15 +38,64 @@
     </pattern>
   </defs>
 
+  <style>
+    .sheen   { animation: sheen 18s linear infinite; }
+    .spine   { animation: spine 9s linear infinite; }
+    .traj    { animation: traj 7s linear infinite; }
+    .halo    { animation: halo 4.5s ease-in-out infinite alternate; }
+    .halo2   { animation: halo 5.6s ease-in-out infinite alternate; animation-delay: -1.8s; }
+    .p       { animation: drift 8s ease-in-out infinite alternate; }
+    .p2      { animation-delay: -2s; }
+    .p3      { animation-delay: -3.6s; }
+    .p4      { animation-delay: -5.2s; }
+    .p5      { animation-delay: -6.4s; }
+    .glowC   { animation: breathe 7s ease-in-out infinite alternate; }
+    .glowV   { animation: breathe 9s ease-in-out infinite alternate-reverse; }
+
+    @keyframes sheen {
+      0%   { transform: translateX(-700px); }
+      100% { transform: translateX(1250px); }
+    }
+    @keyframes spine {
+      0%   { transform: translateY(-90px); opacity: 0; }
+      12%  { opacity: 1; }
+      88%  { opacity: 1; }
+      100% { transform: translateY(300px); opacity: 0; }
+    }
+    @keyframes traj {
+      0%   { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: -360; }
+    }
+    @keyframes halo {
+      0%   { opacity: 0.12; }
+      100% { opacity: 0.5; }
+    }
+    @keyframes drift {
+      0%   { transform: translate(0, 0); opacity: 0.15; }
+      100% { transform: translate(6px, -10px); opacity: 0.7; }
+    }
+    @keyframes breathe {
+      0%   { opacity: 0.65; }
+      100% { opacity: 1; }
+    }
+  </style>
+
   <rect width="1200" height="300" fill="url(#bg)"/>
   <rect width="1200" height="300" fill="url(#grid)" opacity="0.55"/>
-  <ellipse cx="960" cy="40" rx="330" ry="240" fill="url(#glowCyan)"/>
-  <ellipse cx="1120" cy="280" rx="300" ry="200" fill="url(#glowViolet)"/>
 
-  <!-- left accent spine -->
+  <g class="glowC"><ellipse cx="960" cy="40" rx="330" ry="240" fill="url(#glowCyan)"/></g>
+  <g class="glowV"><ellipse cx="1120" cy="280" rx="300" ry="200" fill="url(#glowViolet)"/></g>
+
+  <!-- 流动光带 -->
+  <g class="sheen">
+    <rect x="-380" y="-60" width="300" height="420" fill="url(#sheenGrad)" transform="rotate(10 0 150)"/>
+  </g>
+
+  <!-- 左侧渐变脊线 + 扫描高光 -->
   <rect x="0" y="0" width="5" height="300" fill="url(#accent)"/>
+  <rect class="spine" x="0" y="0" width="5" height="90" fill="url(#spineGlow)"/>
 
-  <!-- circuit traces -->
+  <!-- 电路走线 -->
   <g fill="none" stroke="#1E4B6B" stroke-width="1.2" stroke-opacity="0.75">
     <path d="M1060 24 H1200"/>
     <path d="M1088 48 H1200"/>
@@ -46,20 +105,31 @@
     <circle cx="1088" cy="48" r="2.6"/>
   </g>
 
-  <!-- leg linkage schematic -->
+  <!-- 漂浮粒子 -->
+  <g fill="#7DD3FC">
+    <circle class="p"        cx="742" cy="196" r="2.2"/>
+    <circle class="p p2"     cx="812" cy="72"  r="1.7"/>
+    <circle class="p p3"     cx="878" cy="248" r="2.4"/>
+    <circle class="p p4"     cx="1084" cy="118" r="1.8"/>
+    <circle class="p p5"     cx="1142" cy="212" r="2.1"/>
+    <circle class="p p2"     cx="962" cy="288" r="1.6"/>
+  </g>
+
+  <!-- 四足机构示意 -->
   <g>
-    <path d="M806 236 Q 890 128 1046 206" fill="none" stroke="#5B7091" stroke-width="1.2" stroke-dasharray="3 9" stroke-opacity="0.65"/>
+    <path class="traj" d="M806 236 Q 890 128 1046 206" fill="none" stroke="#5B7091" stroke-width="1.2" stroke-dasharray="3 9" stroke-opacity="0.65"/>
     <path d="M924 96 L 1016 162 L 946 250" fill="none" stroke="url(#accent)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
     <path d="M924 96 L 876 132" fill="none" stroke="#22D3EE" stroke-width="2.6" stroke-linecap="round" stroke-opacity="0.75"/>
     <circle cx="924" cy="96" r="7.5" fill="#0B1526" stroke="#22D3EE" stroke-width="2"/>
     <circle cx="1016" cy="162" r="6" fill="#0B1526" stroke="#8B5CF6" stroke-width="2"/>
     <circle cx="946" cy="250" r="6.5" fill="#0B1526" stroke="#A855F7" stroke-width="2"/>
     <circle cx="876" cy="132" r="4" fill="#0B1526" stroke="#22D3EE" stroke-width="1.6" stroke-opacity="0.8"/>
-    <circle cx="1016" cy="162" r="17" fill="none" stroke="#8B5CF6" stroke-width="1" stroke-opacity="0.35"/>
-    <circle cx="924" cy="96" r="21" fill="none" stroke="#22D3EE" stroke-width="1" stroke-opacity="0.28"/>
+    <circle class="halo"  cx="1016" cy="162" r="17" fill="none" stroke="#8B5CF6" stroke-width="1"/>
+    <circle class="halo2" cx="924" cy="96"  r="21" fill="none" stroke="#22D3EE" stroke-width="1"/>
+    <circle class="halo2" cx="946" cy="250" r="13" fill="none" stroke="#A855F7" stroke-width="1"/>
   </g>
 
-  <!-- labels -->
+  <!-- 标签 -->
   <g font-family="Consolas, 'Cascadia Mono', 'Courier New', monospace" fill="#4C6B8C" font-size="11" letter-spacing="4">
     <text x="72" y="58">PROFILE</text>
     <text x="1130" y="286" text-anchor="end" letter-spacing="2">github.com/heartpain-kong</text>
