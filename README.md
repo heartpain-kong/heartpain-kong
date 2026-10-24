@@ -7,8 +7,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/方向-四足运控-0D1526?style=flat-square&logoColor=22D3EE" alt="focus">
-  <img src="https://img.shields.io/badge/方向-四足运控-0D1526?style=flat-square&logoColor=22D3EE" alt="focus">
+  <img src="https://img.shields.io/badge/方向-四足运控_%2F_嵌入式底层-0D1526?style=flat-square&logoColor=22D3EE" alt="focus">
   <img src="https://img.shields.io/badge/栈-C_%2F_C%2B%2B_%2F_Python-0D1526?style=flat-square&logoColor=8B5CF6" alt="stack">
   <img src="https://komarev.com/ghpvc/?username=heartpain-kong&label=主页访问&color=0D1526&style=flat-square" alt="profile views">
 </p>
