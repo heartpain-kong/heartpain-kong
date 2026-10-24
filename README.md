@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://github.com/heartpain-kong">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&duration=2800&pause=800&color=F9A8D4&center=true&vCenter=true&width=780&height=52&lines=%F0%9F%8D%AE+Hi%2C+I'm+%E7%A9%BA%E6%83%85%E5%BF%83%E7%99%BD;%F0%9F%A6%BF+Legged+Robot+Locomotion;%E2%9A%99%EF%B8%8F+STM32H7+%C2%B7+CAN-FD+%C2%B7+Motor+Drivers;%F0%9F%8F%81+RoboCon+2027+Field+%26+Chassis" alt="typing">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&duration=2800&pause=800&color=DB2777&center=true&vCenter=true&width=780&height=52&lines=%F0%9F%8D%AE+Hi%2C+I'm+%E7%A9%BA%E6%83%85%E5%BF%83%E7%99%BD;%F0%9F%A6%BF+Legged+Robot+Locomotion;%E2%9A%99%EF%B8%8F+STM32H7+%C2%B7+CAN-FD+%C2%B7+Motor+Drivers;%F0%9F%8F%81+RoboCon+2027+Field+%26+Chassis" alt="typing">
   </a>
 </p>
 
