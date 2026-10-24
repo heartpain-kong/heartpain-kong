@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner-sakura.svg" alt="空情心白 · heartpain-kong — Legged Locomotion, Embedded Control, RoboCon" width="100%">
+  <img src="assets/kaoru-banner.webp" alt="空情心白 · heartpain-kong — Legged Locomotion, Embedded Control, RoboCon" width="100%">
 </p>
 
 <p align="center">
