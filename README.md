@@ -39,6 +39,7 @@
 ### 🧭 现在在做
 
 - 🦿 **[LgDog1 强化学习运控](https://github.com/heartpain-kong/mjlab_MGDP)**<br/>&nbsp;&nbsp;mjlab + MuJoCo-Warp 并行训练，盲走 HIM 策略
+- 🐕 **[HIM 盲跑运控](https://github.com/heartpain-kong/HIMLoco_LGDog)**<br/>&nbsp;&nbsp;HIMLoco 移植到 LgDog1，纯本体感知登 15 cm 台阶
 - 🧩 **[战队控制固件](https://github.com/heartpain-kong/TSRobotSystem)**<br/>&nbsp;&nbsp;天枢（RM）/ 漓光（RC），H723 双 MCU 底盘
 - 🏁 **[RoboCon 2027](https://github.com/heartpain-kong/rc2027_field)**<br/>&nbsp;&nbsp;赛题拆解 + 场地 MuJoCo 模型
 
@@ -69,6 +70,7 @@
 
 | 项目 | 简介 | 技术 |
 | :--- | :--- | :--- |
+| **[HIMLoco_LGDog](https://github.com/heartpain-kong/HIMLoco_LGDog)** | 把 HIMLoco 的盲跑运控移植到自研四足 LgDog1：Isaac Gym 训练 → TorchScript 导出 → MuJoCo sim2sim → 实机部署全流程，1.0 m/s 纯本体感知登上 15 cm × 10 级台阶 | `Python` `Isaac Gym` `MuJoCo` |
 | **[mjlab_MGDP](https://github.com/heartpain-kong/mjlab_MGDP)** | LgDog1 深度感知四足强化学习：基于 mjlab + MuJoCo-Warp 的并行训练框架，含盲走 HIM（仅本体感知）策略、分档地形课程与本地 Web 曲线看板 | `Python` `MuJoCo` |
 | **[TSRobotSystem](https://github.com/heartpain-kong/TSRobotSystem)** | 天枢战队 RM 步兵控制系统：STM32H723 舵轮底盘双 MCU（下位机 + 上板），`robot_def.h` 一行切板，配套 PC / Ubuntu / Android 调试助手 | `C` `STM32H723` |
 | **[LGRobotSystem](https://github.com/heartpain-kong/LGRobotSystem)** | 漓光战队 RoboCon 控制固件：主控 H723 + 从板 F407 + miniPC，485 一发一回链路与分层架构 | `C` `STM32H723` |
