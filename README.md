@@ -4,14 +4,14 @@
 
 <p align="center">
   <a href="https://github.com/heartpain-kong">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&duration=2800&pause=800&color=DB2777&center=true&vCenter=true&width=780&height=52&lines=%F0%9F%8D%AE+Hi%2C+I'm+%E7%A9%BA%E6%83%85%E5%BF%83%E7%99%BD;%F0%9F%A6%BF+Legged+Robot+Locomotion;%E2%9A%99%EF%B8%8F+STM32H7+%C2%B7+CAN-FD+%C2%B7+Motor+Drivers;%F0%9F%8F%81+RoboCon+2027+Field+%26+Chassis" alt="typing">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&duration=2800&pause=800&color=DB2777&center=true&vCenter=true&width=780&height=52&lines=%F0%9F%8D%AE+Hi%2C+I'm+%E7%A9%BA%E6%83%85%E5%BF%83%E7%99%BD;%F0%9F%A6%BF+Legged+Robot+Locomotion;%E2%9A%99%EF%B8%8F+STM32H7+%C2%B7+MuJoCo+%C2%B7+Motor+Drivers;%F0%9F%8F%81+RoboCon+2027+Field+%26+Chassis" alt="typing">
   </a>
 </p>
 
 <p align="center">
   初心高于胜负，成长胜于输赢。
   <br/>
-  <sub>Open-source firmware for legged robots — DM02 motor drivers · Tianshu / Liguang team control stacks · LgDog1 RL training · RoboCon 2027 field models</sub>
+  <sub>Open-source firmware for legged robots — Tianshu / Liguang team control stacks · LgDog1 RL training · RoboCon 2027 field models</sub>
 </p>
 
 <p align="center">
@@ -26,7 +26,7 @@
 👋 name      : 空情心白  (heartpain-kong)
 🤖 role      : 机器人运动控制 / 嵌入式开发者
 🎯 focus     : [ 四足运控, 电机驱动, 底盘控制 ]
-🛠️ working   : DM02 开发板开源 · LGRobotSystem
+🛠️ working   : LGRobotSystem · LgDog1 运控
 🧠 learning  : 强化学习运控 · Sim2Real
 💬 ask me    : STM32H7 / mjlab
 📫 reach     : github.com/heartpain-kong
