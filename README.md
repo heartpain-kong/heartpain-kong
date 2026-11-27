@@ -11,7 +11,7 @@
 <p align="center">
   把控制理论写进固件，让机器真正跑起来。
   <br/>
-  <sub>Legged locomotion · motor drivers · the firmware underneath — STM32H7, CAN-FD, MuJoCo.</sub>
+  <sub>Open-source firmware for legged robots — DM02 motor drivers · Tianshu / Liguang team control stacks · LgDog1 RL training · RoboCon 2027 field models</sub>
 </p>
 
 <p align="center">
@@ -24,11 +24,12 @@
 
 ```yaml
 👋 name      : 空情心白  (heartpain-kong)
-🤖 role      : 机器人 / 嵌入式开发者
-🎯 focus     : [ 四足运控, 电机驱动, 底盘控制 ]
-🛠️ working   : LgDog1 强化学习运控 · DM02 开发板开源 · 战队控制固件
-🧠 learning  : RL 运控 · Sim2Real
-💬 ask me    : STM32H7 / CAN-FD / RS485 / MuJoCo 场地
+🦿 role      : 四足运控 / 嵌入式固件开发者
+📦 oss       : [ DM02 电机驱动库, 天枢/漓光战队控制固件, LgDog1 RL 训练框架, RoboCon 2027 场地模型 ]
+🎯 focus     : [ 电机驱动, 真机运控, Sim2Real ]
+🛠️ building  : 深度感知运控 · 新赛季底盘固件
+🧠 learning  : 强化学习 · 盲走 HIM · 地形课程
+💬 ask me    : STM32H7 / CAN-FD / RS485 / MuJoCo / 舵轮底盘
 📫 reach     : 开 Issue 最快 · locowiki.github.io
 ```
 
@@ -39,7 +40,7 @@
 ### 🧭 现在在做
 
 - 🦿 **[LgDog1 强化学习运控](https://github.com/heartpain-kong/mjlab_MGDP)**<br/>&nbsp;&nbsp;mjlab + MuJoCo-Warp 并行训练，盲走 HIM 策略
-- 🔧 **电机驱动库**<br/>&nbsp;&nbsp;达妙 / 宇树 / 灵足 / DJI，CAN-FD 与 RS485 实战
+- 🔧 **[电机驱动库](https://github.com/heartpain-kong/DM02_control)**<br/>&nbsp;&nbsp;达妙 / 宇树 / 灵足 / DJI，CAN-FD 与 RS485 实战
 - 🧩 **[战队控制固件](https://github.com/heartpain-kong/TSRobotSystem)**<br/>&nbsp;&nbsp;天枢（RM）/ 漓光（RC），H723 双 MCU 底盘
 - 🏁 **[RoboCon 2027](https://github.com/heartpain-kong/rc2027_field)**<br/>&nbsp;&nbsp;赛题拆解 + 场地 MuJoCo 模型
 
@@ -134,5 +135,5 @@
 </div>
 
 <p align="center">
-  <sub><b>In brief</b> — I build legged-robot motion control and embedded firmware (STM32H7, CAN-FD, motor drivers), and write down what I learn along the way. Issues and PRs are welcome.</sub>
+  <sub><b>In brief</b> — I develop legged-robot motion control and embedded firmware, and open-source the parts that others can reuse: motor drivers, team control stacks, an RL training framework, and RoboCon field models. Issues and PRs are welcome.</sub>
 </p>
