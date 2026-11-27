@@ -11,7 +11,7 @@
 <p align="center">
   把控制理论写进固件，让机器真正跑起来。
   <br/>
-  <sub>Open-source firmware for legged robots — DM02 motor drivers · Tianshu / Liguang team control stacks · LgDog1 + SuperMimic RL training · RoboCon 2027 field models</sub>
+  <sub>Open-source firmware for legged robots — DM02 motor drivers · Tianshu / Liguang team control stacks · LgDog1 RL training · RoboCon 2027 field models</sub>
 </p>
 
 <p align="center">
@@ -39,7 +39,6 @@
 ### 🧭 现在在做
 
 - 🦿 **[LgDog1 强化学习运控](https://github.com/heartpain-kong/mjlab_MGDP)**<br/>&nbsp;&nbsp;mjlab + MuJoCo-Warp 并行训练，盲走 HIM 策略
-- 🔧 **[电机驱动库](https://github.com/heartpain-kong/DM02_control)**<br/>&nbsp;&nbsp;达妙 / 宇树 / 灵足 / DJI，CAN-FD 与 RS485 实战
 - 🧩 **[战队控制固件](https://github.com/heartpain-kong/TSRobotSystem)**<br/>&nbsp;&nbsp;天枢（RM）/ 漓光（RC），H723 双 MCU 底盘
 - 🏁 **[RoboCon 2027](https://github.com/heartpain-kong/rc2027_field)**<br/>&nbsp;&nbsp;赛题拆解 + 场地 MuJoCo 模型
 
@@ -73,7 +72,6 @@
 | 项目 | 简介 | 技术 |
 | :--- | :--- | :--- |
 | **[mjlab_MGDP](https://github.com/heartpain-kong/mjlab_MGDP)** | LgDog1 深度感知四足强化学习：基于 mjlab + MuJoCo-Warp 的并行训练框架，含盲走 HIM（仅本体感知）策略、分档地形课程与本地 Web 曲线看板 | `Python` `MuJoCo` |
-| **[SuperMimic_Lg](https://github.com/heartpain-kong/SuperMimic_Lg)** | 可微动力学模型 + 软终止 BPTT 的四足运控复现（LgDog1 / Go2）：0.8.0 在 MuJoCo 平地实测 10 s 前进 3.74 m、30 s 11.33 m 不跌倒 | `Python` `MuJoCo` |
 | **[TSRobotSystem](https://github.com/heartpain-kong/TSRobotSystem)** | 天枢战队 RM 步兵控制系统：STM32H723 舵轮底盘双 MCU（下位机 + 上板），`robot_def.h` 一行切板，配套 PC / Ubuntu / Android 调试助手 | `C` `STM32H723` |
 | **[LGRobotSystem](https://github.com/heartpain-kong/LGRobotSystem)** | 漓光战队 RoboCon 控制固件：主控 H723 + 从板 F407 + miniPC，485 一发一回链路与分层架构 | `C` `STM32H723` |
 | **[rc2027_field](https://github.com/heartpain-kong/rc2027_field)** <br/> ![stars](https://img.shields.io/github/stars/heartpain-kong/rc2027_field?style=flat-square&color=F472B6&labelColor=150B18) | ABU RoboCon 2027 场地的 MuJoCo 模型：静态版 + 比赛件可动版（12 天空块 / Mustika / 40 地块），已实测加载与推动 | `Python` `MuJoCo` `XML` |
