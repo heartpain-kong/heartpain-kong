@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  把控制理论写进固件，让机器真正跑起来。
+  初心高于胜负，成长胜于输赢。
   <br/>
   <sub>Open-source firmware for legged robots — DM02 motor drivers · Tianshu / Liguang team control stacks · LgDog1 RL training · RoboCon 2027 field models</sub>
 </p>
@@ -52,8 +52,6 @@
   <img src="https://img.shields.io/badge/C++-F9A8D4?style=flat-square&logo=cplusplus&logoColor=150B18" alt="C++">
   <img src="https://img.shields.io/badge/Python-F9A8D4?style=flat-square&logo=python&logoColor=150B18" alt="Python">
   <img src="https://img.shields.io/badge/STM32-F472B6?style=flat-square&logo=stmicroelectronics&logoColor=FFF1F6" alt="STM32">
-  <img src="https://img.shields.io/badge/CAN--FD-F472B6?style=flat-square&logoColor=FFF1F6" alt="CAN-FD">
-  <img src="https://img.shields.io/badge/RS485-F472B6?style=flat-square&logoColor=FFF1F6" alt="RS485">
   <img src="https://img.shields.io/badge/CMake-C084FC?style=flat-square&logo=cmake&logoColor=150B18" alt="CMake">
   <img src="https://img.shields.io/badge/MuJoCo-C084FC?style=flat-square&logoColor=150B18" alt="MuJoCo">
   <img src="https://img.shields.io/badge/Isaac%20Lab-C084FC?style=flat-square&logo=nvidia&logoColor=150B18" alt="Isaac Lab">
