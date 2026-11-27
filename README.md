@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/kaoru-banner.webp" alt="空情心白 · heartpain-kong — Legged Locomotion, Embedded Control, RoboCon" width="100%">
+  <img src="assets/kaoru-banner.webp" alt="空情心白 · heartpain-kong — quadruped locomotion, embedded control, RoboCon 2027" width="100%">
 </p>
 
 <p align="center">
@@ -11,7 +11,7 @@
 <p align="center">
   初心高于胜负，成长胜于输赢。
   <br/>
-  <sub>Open-source firmware for legged robots — Tianshu / Liguang team control stacks · LgDog1 RL training · RoboCon 2027 field models</sub>
+  <sub>Open-source quadruped code — blind locomotion for our own LgDog1, control stacks for the Tianshu (RoboMaster) and Liguang (RoboCon) teams, and MuJoCo models of the 2027 field.</sub>
 </p>
 
 <p align="center">
@@ -20,7 +20,7 @@
   <img src="https://img.shields.io/github/stars/heartpain-kong?label=Stars&style=flat-square&color=C084FC&labelColor=150B18" alt="stars">
 </p>
 
-## 🍮 关于我
+## 🍮 关于我 · About
 
 ```yaml
 👋 name      : 空情心白  (heartpain-kong)
@@ -36,17 +36,17 @@
 <tr>
 <td valign="top" width="42%">
 
-### 🧭 现在在做
+### 🧭 现在在做 · Now
 
 - 🦿 **[LgDog1 强化学习运控](https://github.com/heartpain-kong/mjlab_MGDP)**<br/>&nbsp;&nbsp;mjlab + MuJoCo-Warp 并行训练，盲走 HIM 策略
-- 🐕 **[HIM 盲跑运控](https://github.com/heartpain-kong/HIMLoco_LGDog)**<br/>&nbsp;&nbsp;HIMLoco 移植到 LgDog1，纯本体感知登 15 cm 台阶
+- 🐕 **[HIM 盲狗强化学习训练](https://github.com/heartpain-kong/HIMLoco_LGDog)**<br/>&nbsp;&nbsp;HIMLoco 移植到 LgDog1，纯本体感知训出 15 cm 台阶盲跑策略
 - 🧩 **[战队控制固件](https://github.com/heartpain-kong/TSRobotSystem)**<br/>&nbsp;&nbsp;天枢（RM）/ 漓光（RC），H723 双 MCU 底盘
 - 🏁 **[RoboCon 2027](https://github.com/heartpain-kong/rc2027_field)**<br/>&nbsp;&nbsp;赛题拆解 + 场地 MuJoCo 模型
 
 </td>
 <td valign="top" width="58%">
 
-### 🛠️ 技术栈
+### 🛠️ 技术栈 · Stack
 
 <p>
   <img src="https://img.shields.io/badge/C-F9A8D4?style=flat-square&logo=c&logoColor=150B18" alt="C">
@@ -66,7 +66,7 @@
 
 <br/>
 
-## 📦 精选作品
+## 📦 精选作品 · Projects
 
 | 项目 | 简介 | 技术 |
 | :--- | :--- | :--- |
@@ -76,7 +76,7 @@
 | **[LGRobotSystem](https://github.com/heartpain-kong/LGRobotSystem)** | 漓光战队 RoboCon 控制固件：主控 H723 + 从板 F407 + miniPC，485 一发一回链路与分层架构 | `C` `STM32H723` |
 | **[rc2027_field](https://github.com/heartpain-kong/rc2027_field)** <br/> ![stars](https://img.shields.io/github/stars/heartpain-kong/rc2027_field?style=flat-square&color=F472B6&labelColor=150B18) | ABU RoboCon 2027 场地的 MuJoCo 模型：静态版 + 比赛件可动版（12 天空块 / Mustika / 40 地块），已实测加载与推动 | `Python` `MuJoCo` `XML` |
 
-## 📊 数据
+## 📊 数据 · Stats
 
 <p align="center">
   <picture>
@@ -102,7 +102,7 @@
   </picture>
 </p>
 
-## 🐍 贡献
+## 🐍 贡献 · Contributions
 
 <p align="center">
   <picture>
@@ -120,7 +120,7 @@
   </picture>
 </p>
 
-## 📚 学习与分享
+## 📚 学习与分享 · Learn
 
 - **[LocoWiki](https://locowiki.github.io/)** — 四足运控入门路线：从基础理论到论文复现的索引
 - **[HIMLoco](https://github.com/heartpain-kong/HIMLoco)** — 上游：Hybrid Internal Model / H∞ 运控官方实现（跟随复现）
@@ -131,5 +131,5 @@
 </div>
 
 <p align="center">
-  <sub><b>In brief</b> — I develop legged-robot motion control and embedded firmware, and open-source the parts that others can reuse: motor drivers, team control stacks, an RL training framework, and RoboCon field models. Issues and PRs are welcome.</sub>
+  <sub><b>In brief</b> — legged-robot motion control and embedded firmware. I open-source what is reusable: team control stacks, blind locomotion trained for our own quadruped LgDog1, and MuJoCo models of the RoboCon 2027 field. Issues and PRs are welcome.</sub>
 </p>
